@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icms2/" />
+<title>users_karma_vote</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">users_karma_vote</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_email</td>
+	<td>user@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_password</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/users/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=a.thumb.thumb_up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=a.thumb.thumb_down</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.value.zero</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>answerOnNextPrompt</td>
+	<td>Test Karma Comment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.thumb.thumb_up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertPrompt</td>
+	<td>Пожалуйста, поясните почему вы ставите такую оценку</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.value.positive</td>
+	<td>+1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='user_profile_tabs']/div/ul/li[5]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>История репутации - admin - InstantCMS 2.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.comment</td>
+	<td>Test Karma Comment</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div.value.positive &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/auth/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_email</td>
+	<td>admin@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_password</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/users/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=a.thumb.thumb_up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=a.thumb.thumb_down</td>
+	<td></td>
+</tr>
+<tr>
+	<td>answerOnNextPrompt</td>
+	<td>Test Downvote Comment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.thumb.thumb_down</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertPrompt</td>
+	<td>Пожалуйста, поясните почему вы ставите такую оценку</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.value.negative</td>
+	<td>-1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='user_profile_tabs']/div/ul/li[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>История репутации - TestUser - InstantCMS 2.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.comment</td>
+	<td>Test Downvote Comment</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div.value.negative &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/auth/logout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

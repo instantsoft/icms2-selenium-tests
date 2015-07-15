@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icms2/" />
+<title>users_messages</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">users_messages</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_email</td>
+	<td>user@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_password</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/users/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.body &gt; ul.menu &gt; li.messages.ajax-modal &gt; a.item &gt; span.wrap</td>
+	<td>Написать сообщение</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.body &gt; ul.menu &gt; li.messages.ajax-modal &gt; a.item &gt; span.wrap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.composer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='contact-1']/a/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=div.composer textarea</td>
+	<td>Test Private Message</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=send</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#message-1 &gt; div.content</td>
+	<td>Test Private Message</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/auth/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_email</td>
+	<td>admin@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_password</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.counter</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='body']/aside/div[2]/div/div/ul/li[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.composer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.content</td>
+	<td>Test Private Message</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=div.composer textarea</td>
+	<td>Test Answer</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=send</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#message-2 &gt; div.content</td>
+	<td>Test Answer</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=ignore</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Добавить контакт в черный список?<br />Вы не будете получать от него сообщения после этого</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='body']/aside/div[2]/div/div/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.notice</td>
+	<td>У вас нет личных сообщений</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/auth/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_email</td>
+	<td>user@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_password</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='body']/aside/div[2]/div/div/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span.ignored_info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#message-2 &gt; div.content</td>
+	<td>Test Answer</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Удалить контакт из списка?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/auth/logout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

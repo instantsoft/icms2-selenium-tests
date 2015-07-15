@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icms2/" />
+<title>auth_user_add</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">auth_user_add</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/auth/register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>user@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=nickname</td>
+	<td>TestUser</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password1</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password2</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Выбрать</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=countries</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=option[value=&quot;3159&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=countries</td>
+	<td>label=Россия</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;3159&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=regions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=option[value=&quot;1998532&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=regions</td>
+	<td>label=Москва и Московская обл.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;4312&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=cities</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=option[value=&quot;4313&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=cities</td>
+	<td>label=Москва</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.message_success</td>
+	<td>Регистрация прошла успешно</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=TestUser</td>
+	<td>TestUser</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=a[title=&quot;TestUser&quot;] &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.widget_activity_list &gt; div.item &gt; div.info &gt; div.title</td>
+	<td>TestUser регистрируется. Приветствуем!</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/activity</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>TestUser регистрируется. Приветствуем! 16 минут назад</td>
+</tr>
+</tbody></table>
+</body>
+</html>

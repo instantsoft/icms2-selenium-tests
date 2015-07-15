@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icms2/" />
+<title>prepare_install</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">prepare_install</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/install/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p</td>
+	<td>InstantCMS распространяется по лицензии GNU/GPL версии 2.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=agree</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h2</td>
+	<td>Версия интерпретатора</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p</td>
+	<td>Все пути указываются относительно:<br />/home/r2/www/icms2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p</td>
+	<td>Укажите реквизиты для подключения к базе данных MySQL<br /> База данных должна быть в кодировке utf8_general_ci</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=db[user]</td>
+	<td>root</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=db[base]</td>
+	<td>instant2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//form[@id='step-form']/fieldset/div[2]/label</td>
+	<td>Заголовок главной страницы</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p</td>
+	<td>Для создания главного администратора необходимо указать его реквизиты</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=nickname</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>admin@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=pass1</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=pass2</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p</td>
+	<td>Сейчас будет создан файл конфигурации сайта.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//td[@id='body']/p[2]</td>
+	<td>Обычно, команда которую нужно добавить в планировщик выглядит так:</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p</td>
+	<td>Установка InstantCMS завершена.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Перейти на сайт</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
