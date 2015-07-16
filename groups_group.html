@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icms2/" />
+<title>groups_group</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">groups_group</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/groups/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=group_profile_title</td>
+	<td>Робототехника</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='left_column']/div[3]/ul/li[2]/strong</td>
+	<td>Создана:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='left_column']/div[3]/ul/li[3]/strong</td>
+	<td>Владелец:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='left_column']/div[3]/ul/li[4]/strong</td>
+	<td>Состав:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=strong</td>
+	<td>Рейтинг:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.title</td>
+	<td>Стена группы</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='group_profile_tabs']/div/ul/li[2]/a/span</td>
+	<td>Контент 1</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='group_profile_tabs']/div/ul/li[3]/a/span</td>
+	<td>Активность</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='group_profile_tabs']/div/ul/li[4]/a/span</td>
+	<td>Участники 1</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=ul.content_counts &gt; li &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='group_profile_tabs']/div/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Мой первый пост в сообществе</td>
+	<td>Мой первый пост в сообществе</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='group_profile_tabs']/div/ul/li[3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>admin добавляет пост Мой первый пост в сообществе</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='group_profile_tabs']/div/ul/li[4]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=admin</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.filter-link &gt; a &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=birth_date[from]</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Ссылка</td>
+	<td>Ссылка</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

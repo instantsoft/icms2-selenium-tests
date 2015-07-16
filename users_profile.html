@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icms2/" />
+<title>users_profile</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">users_profile</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_email</td>
+	<td>admin@example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_password</td>
+	<td>123123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Мой профиль</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='user_profile_tabs']/div/ul/li[2]/a/span</td>
+	<td>Лента</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='user_profile_tabs']/div/ul/li[3]/a/span</td>
+	<td>Группы 1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='user_profile_tabs']/div/ul/li[4]/a/span</td>
+	<td>Комментарии 2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='user_profile_tabs']/div/ul/li[5]/a/span</td>
+	<td>Репутация</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ul.content_counts &gt; li &gt; a</td>
+	<td>Статьи 4</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='left_column']/div[2]/ul/li[2]/a</td>
+	<td>Блог 1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='left_column']/div[2]/ul/li[3]/a</td>
+	<td>Фотоальбомы 1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.online</td>
+	<td>Онлайн</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2.title</td>
+	<td>Стена пользователя</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/auth/logout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
